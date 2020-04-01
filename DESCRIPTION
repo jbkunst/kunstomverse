@@ -1,0 +1,66 @@
+Package: jbkverse
+Title: Easily Install and Load Select Packages
+Version: 0.0.1
+Authors@R: 
+    person(given = "Joshua",
+           family = "Kunst",
+           role = c("aut", "cre"),
+           email = "jbkunst@gmail.com")
+Description: The 'jbkverseverse' is selection of packages designed to be loaded
+    in concert. The purpose of this package is to make it easy to install and 
+    subsequently load those packages.
+Depends: 
+    R (>= 3.1)
+Imports: 
+    cli (>= 1.0.0),
+    crayon (>= 1.3.4),
+    dplyr (>= 0.7.4),
+    purrr (>= 0.2.4),
+    rstudioapi (>= 0.7),
+    tibble (>= 1.4.2),
+    ggplot2,
+    tidyr,
+    stringr,
+    readr,
+    forcats,
+    magrittr,
+    lubridate,
+    scales,
+    broom
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.0
+Suggests: 
+    fs,
+    RODBC,
+    odbc,
+    readxl,
+    writexl,
+    dbplyr,
+    rvest,
+    devtools,
+    testthat,
+    roxygen2,
+    assertthat,
+    forecast,
+    randomForest,
+    partykit,
+    shiny,
+    shinydashboard,
+    shinythemes,
+    flexdashboard,
+    knitr,
+    rmarkdown,
+    xaringan,
+    revealjs,
+    highcharter,
+    DT,
+    leaflet,
+    hrbrthemes,
+    ggrepel,
+    patchwork,
+    ggforce,
+    reprex,
+    furrr,
+    santoku
+License: MIT + file LICENSE
