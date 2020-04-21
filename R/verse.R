@@ -10,7 +10,7 @@ core_unloaded <- function() {
 }
 
 
-jbkverse_attach <- function() {
+kunstomverse_attach <- function() {
   to_load <- core_unloaded()
   if (length(to_load) == 0)
     return(invisible())
@@ -18,7 +18,7 @@ jbkverse_attach <- function() {
   msg(
     cli::rule(
       left = crayon::bold("Attaching packages"),
-      right = paste0("jbkverse ", package_version("jbkverse"))
+      right = paste0("kunstomverse ", package_version("kunstomverse"))
     ),
     startup = TRUE
   )
@@ -53,9 +53,9 @@ package_version <- function(x) {
   paste0(version, collapse = ".")
 }
 
-#' Conflicts between the jbkverse and other packages
+#' Conflicts between the kunstomverse and other packages
 #'
-#' This function lists all the conflicts between packages in the jbkverse
+#' This function lists all the conflicts between packages in the kunstomverse
 #' and other packages that you have loaded.
 #'
 #' If dplyr is one of the select packages, then the following four conflicts
@@ -65,28 +65,28 @@ package_version <- function(x) {
 #'
 #' @export
 #' @examples
-#' jbkverse_conflicts()
-jbkverse_conflicts <- function() {
+#' kunstomverse_conflicts()
+kunstomverse_conflicts <- function() {
   envs <- purrr::set_names(search())
   objs <- invert(lapply(envs, ls_env))
 
   conflicts <- purrr::keep(objs, ~ length(.x) > 1)
 
-  pkg_names <- paste0("package:", jbkverse_packages())
+  pkg_names <- paste0("package:", kunstomverse_packages())
   conflicts <- purrr::keep(conflicts, ~ any(.x %in% pkg_names))
 
   conflict_funs <- purrr::imap(conflicts, confirm_conflict)
   conflict_funs <- purrr::compact(conflict_funs)
 
-  structure(conflict_funs, class = "jbkverse_conflicts")
+  structure(conflict_funs, class = "kunstomverse_conflicts")
 }
 
-jbkverse_conflict_message <- function(x) {
+kunstomverse_conflict_message <- function(x) {
   if (length(x) == 0) return("")
 
   header <- cli::rule(
     left = crayon::bold("Conflicts"),
-    right = "jbkverse_conflicts()"
+    right = "kunstomverse_conflicts()"
   )
 
   pkgs <- x %>% purrr::map(~ gsub("^package:", "", .))
@@ -108,8 +108,8 @@ jbkverse_conflict_message <- function(x) {
 }
 
 #' @export
-print.jbkverse_conflicts <- function(x, ..., startup = FALSE) {
-  cli::cat_line(jbkverse_conflict_message(x))
+print.kunstomverse_conflicts <- function(x, ..., startup = FALSE) {
+  cli::cat_line(kunstomverse_conflict_message(x))
 }
 
 #' @importFrom magrittr %>%
@@ -139,26 +139,26 @@ ls_env <- function(env) {
   x
 }
 
-#' Update jbkverse packages
+#' Update kunstomverse packages
 #'
-#' This will check to see if all jbkverse packages (and optionally, their
+#' This will check to see if all kunstomverse packages (and optionally, their
 #' dependencies) are up-to-date, and will install after an interactive
 #' confirmation.
 #'
 #' @param recursive If \code{TRUE}, will also check all dependencies of
-#'   jbkverse packages.
+#'   kunstomverse packages.
 #' @export
 #' @examples
 #' \dontrun{
-#' jbkverse_update()
+#' kunstomverse_update()
 #' }
-jbkverse_update <- function(recursive = FALSE) {
+kunstomverse_update <- function(recursive = FALSE) {
 
-  deps <- jbkverse_deps(recursive)
+  deps <- kunstomverse_deps(recursive)
   behind <- dplyr::filter(deps, behind)
 
   if (nrow(behind) == 0) {
-    cli::cat_line("All jbkverse packages up-to-date")
+    cli::cat_line("All kunstomverse packages up-to-date")
     return(invisible())
   }
 
@@ -176,14 +176,14 @@ jbkverse_update <- function(recursive = FALSE) {
   invisible()
 }
 
-#' List all jbkverse dependencies
+#' List all kunstomverse dependencies
 #'
 #' @param recursive If \code{TRUE}, will also list all dependencies of
-#'   jbkverse packages.
+#'   kunstomverse packages.
 #' @export
-jbkverse_deps <- function(recursive = FALSE) {
+kunstomverse_deps <- function(recursive = FALSE) {
   pkgs <- utils::available.packages()
-  deps <- tools::package_dependencies("jbkverse", pkgs, recursive = recursive)
+  deps <- tools::package_dependencies("kunstomverse", pkgs, recursive = recursive)
 
   pkg_deps <- unique(sort(unlist(deps)))
 
@@ -227,20 +227,20 @@ text_col <- function(x) {
 
 }
 
-#' List all packages in the jbkverse
+#' List all packages in the kunstomverse
 #'
-#' @param include_self Include jbkverse in the list?
+#' @param include_self Include kunstomverse in the list?
 #' @export
 #' @examples
-#' jbkverse_packages()
-jbkverse_packages <- function(include_self = TRUE) {
-  raw <- utils::packageDescription("jbkverse")$Imports
+#' kunstomverse_packages()
+kunstomverse_packages <- function(include_self = TRUE) {
+  raw <- utils::packageDescription("kunstomverse")$Imports
   imports <- strsplit(raw, ",")[[1]]
   parsed <- gsub("^\\s+|\\s+$", "", imports)
   names <- vapply(strsplit(parsed, "\\s+"), "[[", 1, FUN.VALUE = character(1))
 
   if (include_self) {
-    names <- c(names, "jbkverse")
+    names <- c(names, "kunstomverse")
   }
 
   names
@@ -266,11 +266,11 @@ style_grey <- function(level, ...) {
     return()
 
   crayon::num_colors(TRUE)
-  jbkverse_attach()
+  kunstomverse_attach()
 
   if (!"package:conflicted" %in% search()) {
-    x <- jbkverse_conflicts()
-    msg(jbkverse_conflict_message(x), startup = TRUE)
+    x <- kunstomverse_conflicts()
+    msg(kunstomverse_conflict_message(x), startup = TRUE)
   }
 
 }
