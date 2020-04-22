@@ -1,0 +1,54 @@
+---
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# kunstomverse
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of kunstomverse is a custom tidyverse package:
+
+- Load some missing packages that tidyverse don't load: scales, lubridate, broom.
+- Install via suggests some packages 
+- Have some custom functions like `theme_knst`
+
+## Details
+
+```{r, include=FALSE}
+source("dev/pkgs.R")
+```
+
+The packages to load:
+
+```{r}
+pkgs
+```
+
+Intalled packages via suggests:
+
+```{r}
+extras
+```
+
+## Installation
+
+```{r, eval=FALSE}
+# install.packages("remotes")
+remotes::install_github("jbkunst/kunstomverse")
+```
+
+
