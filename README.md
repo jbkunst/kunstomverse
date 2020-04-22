@@ -7,7 +7,8 @@
 
 <!-- badges: end -->
 
-The goal of kunstomverse is a custom tidyverse package:
+The goal of kunstomverse is to be a custom tidyverse package among other
+things:
 
   - Load some missing packages that tidyverse don’t load: scales,
     lubridate, broom.
