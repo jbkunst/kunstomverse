@@ -32,8 +32,6 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
 Suggests: 
-    fs,
-    RODBC,
     odbc,
     readxl,
     writexl,
@@ -54,6 +52,7 @@ Suggests:
     rmarkdown,
     xaringan,
     revealjs,
+    distill,
     highcharter,
     DT,
     leaflet,
@@ -61,6 +60,8 @@ Suggests:
     patchwork,
     ggforce,
     extrafont,
+    fs,
+    desc,
     reprex,
     furrr,
     santoku

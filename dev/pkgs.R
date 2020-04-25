@@ -21,21 +21,63 @@ pkgs2 <- c(
 )
 
 extras <- c(
-  # general
+  # io ----------------------------------------------------------------------
+  "odbc",
+  "readxl",
+  "writexl",
+  "dbplyr",
+  "rvest",
+
+  # dev ---------------------------------------------------------------------
+  "devtools",
+  "testthat",
+  "roxygen2",
+  "assertthat",
+  
+  # modelling ---------------------------------------------------------------
+  "forecast",
+  "randomForest",
+  "partykit", 
+  
+  # reporting ---------------------------------------------------------------
+  "shiny",
+  "shinydashboard", 
+  "shinythemes",
+  "flexdashboard",
+  "knitr",
+  "rmarkdown",
+  "xaringan",
+  "revealjs",
+  "distill",
+  
+  # widgets -----------------------------------------------------------------
+  "highcharter",
+  "DT",
+  "leaflet",
+  
+  # plot --------------------------------------------------------------------
+  "ggrepel",
+  "patchwork",
+  "ggforce",
+  "extrafont",
+  
+  # complements -------------------------------------------------------------
   "fs",
-  # io
-  "RODBC", "odbc", "readxl", "writexl", "dbplyr", "rvest",
-  # development
-  "devtools", "testthat", "roxygen2", "assertthat",
-  # modelling
-  "forecast", "randomForest", "partykit", 
-  # reporting
-  "shiny", "shinydashboard", "shinythemes", "flexdashboard",
-  "knitr", "rmarkdown", "xaringan", "revealjs",
-  # widgets
-  "highcharter", "DT", "leaflet",
-  # plot
-  "ggrepel", "patchwork", "ggforce", "extrafont",
-  # others
-  "reprex", "furrr", "santoku"
+  "desc",
+  "reprex",
+  "furrr",
+  "santoku"
 )
+
+
+writeLines(
+  paste0(
+    "# Automatic generated file\n",
+    "EXTRAPACKAGES <- c(", 
+    paste("\"", extras, "\"", sep = "", collapse = ",\n"),
+    ")"
+  ),
+  "R/extra-packages.R"
+)
+
+

@@ -38,10 +38,11 @@ The packages to load:
 pkgs
 ```
 
-Intalled packages via suggests:
+You can install extra packages using::
 
 ```{r}
-extras
+# install.packages(kunstomverse:::EXTRAPACKAGES)
+kunstomverse:::EXTRAPACKAGES
 ```
 
 ## Installation
@@ -49,6 +50,7 @@ extras
 ```{r, eval=FALSE}
 # install.packages("remotes")
 remotes::install_github("jbkunst/kunstomverse")
+install.packages(kunstomverse:::EXTRAPACKAGES)
 ```
 
 

@@ -48,7 +48,7 @@ dfdeps <-  dplyr::bind_rows(
   dfdeps,
   tibble::tibble(
     type = "Imports",
-    package = pkgs2,
+    package = c(pkgs2),
     version = "*"
   )
 )
@@ -88,5 +88,5 @@ devtools::document()
 
 devtools::check()
 
-# devtools::build()
+devtools::build()
 

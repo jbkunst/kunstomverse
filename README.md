@@ -25,18 +25,20 @@ pkgs
 #>  [7] "readr"     "forcats"   "magrittr"  "lubridate" "scales"    "broom"
 ```
 
-Intalled packages via suggests:
+You can install extra packages using::
 
 ``` r
-extras
-#>  [1] "fs"             "RODBC"          "odbc"           "readxl"        
-#>  [5] "writexl"        "dbplyr"         "rvest"          "devtools"      
-#>  [9] "testthat"       "roxygen2"       "assertthat"     "forecast"      
-#> [13] "randomForest"   "partykit"       "shiny"          "shinydashboard"
-#> [17] "shinythemes"    "flexdashboard"  "knitr"          "rmarkdown"     
-#> [21] "xaringan"       "revealjs"       "highcharter"    "DT"            
-#> [25] "leaflet"        "ggrepel"        "patchwork"      "ggforce"       
-#> [29] "extrafont"      "reprex"         "furrr"          "santoku"
+# install.packages(kunstomverse:::EXTRAPACKAGES)
+kunstomverse:::EXTRAPACKAGES
+#>  [1] "odbc"           "readxl"         "writexl"        "dbplyr"        
+#>  [5] "rvest"          "devtools"       "testthat"       "roxygen2"      
+#>  [9] "assertthat"     "forecast"       "randomForest"   "partykit"      
+#> [13] "shiny"          "shinydashboard" "shinythemes"    "flexdashboard" 
+#> [17] "knitr"          "rmarkdown"      "xaringan"       "revealjs"      
+#> [21] "distill"        "highcharter"    "DT"             "leaflet"       
+#> [25] "ggrepel"        "patchwork"      "ggforce"        "extrafont"     
+#> [29] "fs"             "desc"           "reprex"         "furrr"         
+#> [33] "santoku"
 ```
 
 ## Installation
@@ -44,4 +46,5 @@ extras
 ``` r
 # install.packages("remotes")
 remotes::install_github("jbkunst/kunstomverse")
+install.packages(kunstomverse:::EXTRAPACKAGES)
 ```
