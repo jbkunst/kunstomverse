@@ -17,7 +17,8 @@ pkgs <- c(
 
 # package to not load but needed for other functions
 pkgs2 <- c(
-  "hrbrthemes"
+  "hrbrthemes",
+  "progress"
 )
 
 extras <- c(
@@ -38,6 +39,7 @@ extras <- c(
   "forecast",
   "randomForest",
   "partykit", 
+  "ranger",
   
   # reporting ---------------------------------------------------------------
   "shiny",

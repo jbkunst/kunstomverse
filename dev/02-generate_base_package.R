@@ -7,12 +7,10 @@ pkgname <- "kunstomverse"
 try(fs::file_delete("DESCRIPTION"))
 try(fs::file_delete("NAMESPACE"))
 
-source("dev/pkgs.R")
-
+source("dev/01-pkgs.R")
 
 # creating package --------------------------------------------------------
 tmpdr      <- tempdir()
-
 tmpdrp_pkg <- fs::path(tmpdr, pkgname)
 
 try(fs::dir_delete(tmpdrp_pkg))
