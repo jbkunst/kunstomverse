@@ -3,7 +3,7 @@
 \name{scale_x_date_year}
 \alias{scale_x_date_year}
 \alias{scale_x_date_yyyymm}
-\title{Auxiliar shortcut cales with opinionated pre-sets}
+\title{Auxiliar shortcut scales with opinionated pre-sets}
 \usage{
 scale_x_date_year(date_breaks = "year", date_labels = "\%Y", ...)
 
@@ -17,5 +17,5 @@ scale_x_date_yyyymm(date_breaks = "month", date_labels = "\%Y\%m", ...)
 \item{...}{More arguments for `scale_x_date`}
 }
 \description{
-Auxiliar shortcut cales with opinionated pre-sets
+Auxiliar shortcut scales with opinionated pre-sets
 }

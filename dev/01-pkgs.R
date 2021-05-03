@@ -4,7 +4,7 @@ pkgs <- c(
   "ggplot2",
   "dplyr",
   "tibble",
-  "tidyr",
+  "tidyr", 
   "stringr",
   "readr", 
   "forcats",
@@ -18,7 +18,9 @@ pkgs <- c(
 # package to not load but needed for other functions
 pkgs2 <- c(
   "hrbrthemes",
-  "progress"
+  "progress",
+  "Metrics",
+  "rlang"
 )
 
 extras <- c(

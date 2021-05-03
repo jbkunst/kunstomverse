@@ -6,7 +6,13 @@
 \alias{theme_knst_segoe}
 \title{My ggplot2 go-to theme inspired by \code{hrbrthemes}}
 \usage{
-theme_knst(...)
+theme_knst(
+  ...,
+  base_size = 10,
+  plot_margin = ggplot2::margin(10, 10, 10, 10),
+  axis_title_size = 10,
+  grid_col = "grey80"
+)
 
 theme_knst_calibri(..., plot_title_face = "plain")
 
@@ -14,6 +20,14 @@ theme_knst_segoe(..., plot_title_face = "plain")
 }
 \arguments{
 \item{...}{Parameters for \code{hrbrthemes::theme_ipsum}}
+
+\item{base_size}{10}
+
+\item{plot_margin}{ggplot2::margin(10, 10, 10, 10)}
+
+\item{axis_title_size}{10}
+
+\item{grid_col}{"grey80"}
 
 \item{plot_title_face}{plot_title_face}
 }
@@ -33,7 +47,7 @@ p <- ggplot(mtcars) +
    hrbrthemes::scale_color_ipsum(name = "Carb") +
    labs( 
      x = "Fuel effiiency (mpg)", y="Weight (tons)",
-     title = "Seminal ggplot2 scatterplot example",\
+     title = "Seminal ggplot2 scatterplot example",
      subtitle = "A plot that is only useful for demonstration purposes",
      caption = "Brought to you by the letter 'g'"
      ) +
@@ -44,13 +58,16 @@ p
 pp <- p + facet_wrap(vars(factor(carb)))
 
 pp + theme_knst(base_family = "Calibri")
+
+pp + theme_knst_segoe()
+pp + theme_knst_calibri(base_size = 15, axis_title_size = 15)
+
 pp + 
   theme_knst(
     base_family = "Calibri Light",
     plot_title_family = "Calibri"
    )
    
- 
 } 
 
 }

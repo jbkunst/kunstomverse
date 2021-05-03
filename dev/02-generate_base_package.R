@@ -15,7 +15,9 @@ tmpdrp_pkg <- fs::path(tmpdr, pkgname)
 
 try(fs::dir_delete(tmpdrp_pkg))
 
-pkgverse::pkgverse(pkgname, pkgs, keep = tmpdr)
+try(remove.packages(pkgname))
+
+pkgverse::pkgverse(pkgname, pkgs, keep = tmpdr, install_if = TRUE)
 
 dir(tmpdrp_pkg)
 
