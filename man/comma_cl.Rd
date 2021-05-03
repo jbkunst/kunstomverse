@@ -27,7 +27,6 @@ percent_cl(
   big.mark = ".",
   decimal.mark = ",",
   trim = TRUE,
-  digits,
   ...
 )
 }
@@ -66,5 +65,10 @@ comma_cl(x + .123, accuracy = 0.001)
 comma_cl(x + .123, accuracy = 0.001, big.mark = " ")
 
 scales::comma(x)
+
+y <- runif(10)
+
+percent_cl(y)
+
 
 }

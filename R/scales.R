@@ -22,6 +22,11 @@
 #' 
 #' scales::comma(x)
 #' 
+#' y <- runif(10)
+#' 
+#' percent_cl(y)
+#' 
+#' 
 #' @importFrom scales comma
 #' @export
 comma_cl <- function(x,
@@ -72,7 +77,6 @@ percent_cl <- function(x,
     big.mark = big.mark,
     decimal.mark = decimal.mark,
     trim = trim,
-    digits = digits,
     ...
   )
   
