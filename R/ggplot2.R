@@ -104,5 +104,34 @@ scale_x_date_yyyymm <- function(date_breaks = "month", date_labels = "%Y%m", ...
 }
 
 
+#' Geom point/jitter with shape 21 and color white
+#' 
+#' @param ... geom_point/geom_jitter parameters.
+#' @param shape Shape 21
+#' @param color Color "white"
+#' @examples 
+#' 
+#' ggplot(iris) +
+#'   geom_jitter(aes(Sepal.Length, Sepal.Width, color = Species))
+#'   
+#' ggplot(iris) +
+#'   geom_jitter2(aes(Sepal.Length, Sepal.Width, fill = Species))
+#'   
+#' ggplot(iris) +
+#'   geom_point(aes(Sepal.Length, Sepal.Width, color = Species))
+#'   
+#' ggplot(iris) +
+#'   geom_point2(aes(Sepal.Length, Sepal.Width, fill = Species))
+#'   
+#' @importFrom ggplot2 geom_point
+#' @export
+geom_point2 <- function(..., shape = 21, color = "white") {
+  ggplot2::geom_point(..., shape = shape, color = color)
+}
 
-
+#' @rdname geom_point2
+#' @importFrom ggplot2 geom_jitter
+#' @export
+geom_jitter2 <- function(..., shape = 21, color = "white") {
+  ggplot2::geom_jitter(..., shape = shape, color = color)
+}
