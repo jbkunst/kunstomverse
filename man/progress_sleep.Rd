@@ -4,7 +4,7 @@
 \alias{progress_sleep}
 \title{Wrapper of `Sys.sleep()` using  `{progress}` package}
 \usage{
-progress_sleep(time, format = "  waiting [:bar] :percent eta: :eta", ...)
+progress_sleep(time, format = " waiting [:bar] :percent eta: :eta", ...)
 }
 \arguments{
 \item{time}{The time interval to suspend execution for, in seconds.}

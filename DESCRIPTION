@@ -29,7 +29,6 @@ Imports:
     broom,
     hrbrthemes,
     progress,
-    Metrics,
     rlang
 Encoding: UTF-8
 LazyData: true

@@ -9,7 +9,10 @@
 #' @param decimal.mark ","
 #' @param trim TRUE
 #' @param digits digits
+#' @param largest_with_cents largest_with_cents
+#' @param negative_parens negative_parens
 #' @param ... Other arguments passed on to base::format(). 
+#' 
 #' @examples
 #' 
 #' x <- 10^c(1:10)

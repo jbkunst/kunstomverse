@@ -13,7 +13,7 @@
 #' system.time(progress_sleep(10))
 #' 
 #' @export
-progress_sleep <- function(time, format = "  waiting [:bar] :percent eta: :eta" , ...) {
+progress_sleep <- function(time, format = " waiting [:bar] :percent eta: :eta" , ...) {
   
   time <- round(time) + 1
   

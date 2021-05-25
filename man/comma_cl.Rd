@@ -3,6 +3,7 @@
 \name{comma_cl}
 \alias{comma_cl}
 \alias{percent_cl}
+\alias{dollar_cl}
 \title{Local version of scales::comma scales::percent}
 \usage{
 comma_cl(
@@ -29,6 +30,20 @@ percent_cl(
   trim = TRUE,
   ...
 )
+
+dollar_cl(
+  x,
+  accuracy = NULL,
+  scale = 1,
+  prefix = "$",
+  suffix = "",
+  big.mark = ".",
+  decimal.mark = ",",
+  trim = TRUE,
+  largest_with_cents = 1e+05,
+  negative_parens = FALSE,
+  ...
+)
 }
 \arguments{
 \item{x}{A numeric vector to format.}
@@ -50,6 +65,10 @@ percent_cl(
 \item{digits}{digits}
 
 \item{...}{Other arguments passed on to base::format().}
+
+\item{largest_with_cents}{largest_with_cents}
+
+\item{negative_parens}{negative_parens}
 }
 \description{
 Local version of scales::comma scales::percent
@@ -70,5 +89,10 @@ y <- runif(10)
 
 percent_cl(y)
 
+dollar_cl(x)
+
+dollar_cl(x + .123, accuracy = 0.001)
+
+dollar_cl(x + .123, accuracy = 0.0001, largest_with_cents = Inf)
 
 }

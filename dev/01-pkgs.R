@@ -19,7 +19,6 @@ pkgs <- c(
 pkgs2 <- c(
   "hrbrthemes",
   "progress",
-  "Metrics",
   "rlang"
 )
 
