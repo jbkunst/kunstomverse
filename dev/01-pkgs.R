@@ -19,7 +19,8 @@ pkgs <- c(
 pkgs2 <- c(
   "hrbrthemes",
   "progress",
-  "rlang"
+  "rlang",
+  "tictoc"
 )
 
 extras <- c(
