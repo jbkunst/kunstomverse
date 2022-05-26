@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 # kunstomverse
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/jbkunst/kunstomverse/workflows/R-CMD-check/badge.svg)](https://github.com/jbkunst/kunstomverse/actions)
 <!-- badges: end -->
 
 The goal of kunstomverse is to be a custom tidyverse package among other things:
@@ -29,7 +30,7 @@ The goal of kunstomverse is to be a custom tidyverse package among other things:
 ## Details
 
 ```{r, include=FALSE}
-source("dev/pkgs.R")
+source("dev/01-pkgs.R")
 ```
 
 The packages to load:

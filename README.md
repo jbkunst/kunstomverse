@@ -5,15 +5,16 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/jbkunst/kunstomverse/workflows/R-CMD-check/badge.svg)](https://github.com/jbkunst/kunstomverse/actions)
 <!-- badges: end -->
 
 The goal of kunstomverse is to be a custom tidyverse package among other
 things:
 
-  - Load some missing packages that tidyverse don’t load: scales,
+-   Load some missing packages that tidyverse don’t load: scales,
     lubridate, broom.
-  - Install via suggests some packages
-  - Have some custom functions like `theme_knst`
+-   Install via suggests some packages
+-   Have some custom functions like `theme_knst`
 
 ## Details
 
@@ -33,12 +34,12 @@ kunstomverse:::EXTRAPACKAGES
 #>  [1] "odbc"           "readxl"         "writexl"        "dbplyr"        
 #>  [5] "rvest"          "devtools"       "testthat"       "roxygen2"      
 #>  [9] "assertthat"     "forecast"       "randomForest"   "partykit"      
-#> [13] "shiny"          "shinydashboard" "shinythemes"    "flexdashboard" 
-#> [17] "knitr"          "rmarkdown"      "xaringan"       "revealjs"      
-#> [21] "distill"        "highcharter"    "DT"             "leaflet"       
-#> [25] "ggrepel"        "patchwork"      "ggforce"        "extrafont"     
-#> [29] "fs"             "desc"           "reprex"         "furrr"         
-#> [33] "santoku"
+#> [13] "ranger"         "shiny"          "shinydashboard" "shinythemes"   
+#> [17] "flexdashboard"  "knitr"          "rmarkdown"      "xaringan"      
+#> [21] "revealjs"       "distill"        "highcharter"    "DT"            
+#> [25] "leaflet"        "ggrepel"        "patchwork"      "ggforce"       
+#> [29] "extrafont"      "fs"             "desc"           "reprex"        
+#> [33] "furrr"          "santoku"
 ```
 
 ## Installation
