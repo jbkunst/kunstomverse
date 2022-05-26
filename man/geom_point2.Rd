@@ -23,14 +23,14 @@ Geom point/jitter with shape 21 and color white
 
 ggplot(iris) +
   geom_jitter(aes(Sepal.Length, Sepal.Width, color = Species))
-  
+
 ggplot(iris) +
   geom_jitter2(aes(Sepal.Length, Sepal.Width, fill = Species))
-  
+
 ggplot(iris) +
   geom_point(aes(Sepal.Length, Sepal.Width, color = Species))
-  
+
 ggplot(iris) +
   geom_point2(aes(Sepal.Length, Sepal.Width, fill = Species))
-  
+
 }

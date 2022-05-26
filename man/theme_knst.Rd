@@ -45,14 +45,14 @@ library(hrbrthemes)
 p <- ggplot(mtcars) +
    geom_point(aes(mpg, hp, color = factor(carb)), size = 2.5) +
    hrbrthemes::scale_color_ipsum(name = "Carb") +
-   labs( 
+   labs(
      x = "Fuel effiiency (mpg)", y="Weight (tons)",
      title = "Seminal ggplot2 scatterplot example",
      subtitle = "A plot that is only useful for demonstration purposes",
      caption = "Brought to you by the letter 'g'"
      ) +
  theme_knst()
-  
+
 p
 
 pp <- p + facet_wrap(vars(factor(carb)))
@@ -62,12 +62,12 @@ pp + theme_knst(base_family = "Calibri")
 pp + theme_knst_segoe()
 pp + theme_knst_calibri(base_size = 15, axis_title_size = 15)
 
-pp + 
+pp +
   theme_knst(
     base_family = "Calibri Light",
     plot_title_family = "Calibri"
    )
-   
-} 
+
+}
 
 }

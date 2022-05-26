@@ -1,4 +1,4 @@
-#' A function to aplied some forcats functions
+#' A function to applied some forcats functions
 #' 
 #' @param x A vector
 #' @param na_level If this argument is not null, then `fct_explicit_na` is applied

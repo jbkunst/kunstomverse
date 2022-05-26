@@ -2,7 +2,7 @@
 % Please edit documentation in R/forcats.R
 \name{fct_clean}
 \alias{fct_clean}
-\title{A function to aplied some forcats functions}
+\title{A function to applied some forcats functions}
 \usage{
 fct_clean(
   x,
@@ -26,7 +26,7 @@ and `other_level`.}
 \item{infreq}{Logical value to apply or not `fct_infreq`.}
 }
 \description{
-A function to aplied some forcats functions
+A function to applied some forcats functions
 }
 \examples{
 
